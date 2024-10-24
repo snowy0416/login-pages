@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+  font-family: Raleway, sans-serif;
+}
+
+/* body {
+  background: linear-gradient(180deg, #4c9baa, #BFDBF7);  
+}  */
+body {
+  background: linear-gradient(180deg, #1F7A8C, #EAF4FE);  
+  overflow: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 40%;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.2); 
+}
+
+body::before {
+  right: -200px;
+  top: 50%;
+  transform: translateX(-50%);
+  animation: waves 6s infinite linear;
+}
+
+body::after {
+  right: -250px;
+  top: 40%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.15); 
+  animation: waves 8s infinite linear;
+}
+
+@keyframes waves {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.screen {    
+  background: linear-gradient(90deg, #1F7A8C, #BFDBF7);    
+  position: relative;  
+  height: 600px;
+  width: 360px;  
+  box-shadow: 0px 0px 24px #1F7A8C;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative;  
+  height: 100%;
+}
+
+.screen__background {    
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);  
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #EAF4FE;  
+  top: -50px;
+  right: 120px;  
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #BFDBF7;   
+  top: -172px;
+  right: 0;  
+  border-radius: 32px;
+} 
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #1F7A8C, #BFDBF7);
+  top: -24px;
+  right: 0;  
+  border-radius: 32px;
+} 
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: #1F7A8C;  
+  top: 420px;
+  right: 50px;  
+  border-radius: 60px;
+}
+
+.login__input:focus {
+  animation: shake 0.5s ease-in-out;
+}
+@keyframes shake {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(-5px); }
+	50% { transform: translateX(0); }
+	75% { transform: translateX(5px); }
+	100% { transform: translateX(0); }
+  }
+
+
+.login {
+  width: 320px;
+  padding: 30px;
+  padding-top: 156px;
+  animation: slideUp 1s ease-out;
+}
+@keyframes slideUp {
+	0% {
+	  transform: translateY(30px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+
+.login__field {
+  padding: 20px 0px;  
+  position: relative;  
+}
+
+.login__icon {
+  position: absolute;
+  top: 30px;
+  color: #1F7A8C;
+}
+
+.login__input {
+  border: none;
+  border-bottom: 2px solid #A1B4CF;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 75%;
+  transition: .2s;
+  color: #1F7A8C;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: #1F7A8C;
+}
+
+.login__submit {
+  background: #BFDBF7;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 16px 20px;
+  border-radius: 26px;
+  border: 1px solid #1F7A8C;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #1F7A8C;
+  box-shadow: 0px 2px 2px #1F7A8C;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+  border-color: #1F7A8C;
+  outline: none;
+  background: #1F7A8C;
+  color: #BFDBF7;
+}
+
+.button__icon {
+  font-size: 24px;
+  margin-left: auto;
+  color: #1F7A8C;
+}
+
+.social-login {  
+  position: absolute;
+  height: 140px;
+  width: 160px;
+  text-align: center;
+  bottom: 0px;
+  right: 0px;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-login__icon {
+  padding: 20px 10px;
+  color: #BFDBF7;
+  text-decoration: none;  
+  text-shadow: 0px 0px 8px #1F7A8C;
+  transition: transform 0.3s ease;
+}
+
+.social-login__icon:hover {
+  transform: scale(1.5);  
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

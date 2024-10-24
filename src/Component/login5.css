@@ -1,0 +1,139 @@
+body{
+    background: url('https://wallpapercave.com/wp/wp1895493.jpg');
+     background-size: cover; 
+}
+.con2{
+    width: 100vw;
+    margin-left: 18rem;
+    margin-top: 8%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.left{
+    width:30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    justify-content: center;
+    align-items:center;
+    padding: 50px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); 
+}
+.left p{
+   width: 25vw;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 6vh;
+  }
+  
+  .card-icon {
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--bg-primary);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card-icon:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  .right{
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 50px;
+    margin-left: -10%;
+  }
+
+   .blank{
+    width: 35vw;
+    height: 65vh;
+    background:url('https://wallpapercave.com/wp/wp1895493.jpg');
+    background-size: cover;
+    position:relative;
+    margin-top: 2rem;
+    margin-right: 3rem;;
+  } 
+  .about{
+    position: absolute;
+    height: 70vh;
+  }
+  form {
+    width:35vw;
+    position:relative;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 50px;
+    background: rgba(255,255,255,0.1);
+    border-top:2px solid rgba(255,255,255,0.5);
+    border-left:2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transform: scale(0);
+    animation: zoom 0.5s ease-in-out 0.5s 1 forwards;
+}
+
+@keyframes zoom {
+    100% {
+        transform: scale(1);
+    }
+}
+.Lg{
+    width: 300px;
+    border-radius: .5rem;
+    border: 0.125rem solid #fff;
+    padding: 20px 30px; 
+    background: linear-gradient(45deg, #95c4ea, #d3cccf, #f5f3df, #e4f1e5);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-size: 15px;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.inputs{
+    width: 300px; 
+     padding: 20px 30px; 
+    font-size: 13px;
+    text-align: center;
+    background-color: rgb(223, 223, 228);
+    border-radius: .5rem;
+    border: 0.125rem solid #fff;
+    outline: none;
+}
+.inputs:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
